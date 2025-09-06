@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/helvetica/Helvetica.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Oblique';
+  src: url('/helvetica/Helvetica-Oblique.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Compressed';
+  src: url('/helvetica/helvetica-compressed-5871d14b6903a.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Rounded Bold';
+  src: url('/helvetica/helvetica-rounded-bold-5871d05ead8de.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Bold';
+  src: url('/helvetica/Helvetica-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Bold Oblique';
+  src: url('/helvetica/Helvetica-BoldOblique.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Helvetica Light';
+  src: url('/helvetica/helvetica-light-587ebe5a59211.woff') format('woff');
+}
