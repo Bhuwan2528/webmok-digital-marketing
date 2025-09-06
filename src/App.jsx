@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import Header from './Components/Header/Header'
 import Courses from './Components/Courses/Courses'
 // App.jsx ya main.jsx ke upar
-import "./assets/helvetica/style.css";
 import About from './Components/About/About';
 import Team from './Components/Team/Team';
 import Testimonials from './Components/Testimonials/Testimonials';
