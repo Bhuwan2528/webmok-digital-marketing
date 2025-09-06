@@ -1,0 +1,101 @@
+/* Overlay background with blur */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Popup box */
+.popup-container {
+  position: relative;
+  background: #f8f6f6;
+  padding: 30px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(39, 38, 38, 0.2);
+  width: 400px;
+  max-width: 90%;
+  animation: popUp 0.4s ease;
+}
+.popup-container h2{
+  color: #00307a;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  color: black;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Form styling */
+/* .form-container {
+  width: 100%;
+  background: transparent;
+} */
+
+.custom-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.custom-form input,
+.custom-form textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+  color: #222;
+}
+
+.custom-form textarea {
+  resize: none;
+  height: 80px;
+}
+
+/* Submit button */
+.submit-btn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #00307a;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: rgb(5, 93, 224);
+  transform: translateY(-2px);
+}
+
+/* Animation */
+@keyframes popUp {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

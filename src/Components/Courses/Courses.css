@@ -1,0 +1,152 @@
+.courses {
+  width: 100%;
+  /* background: linear-gradient(to bottom, #fdc5e1b0, #daaffd); */
+  padding: 4rem 12.5%;
+  perspective: 1000px; /* 3D effect dikhane ke liye */
+}
+
+.courses h2 {
+  font-weight: 700;
+  font-size: 45px;
+  text-align: center;
+  color: #111;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.courses h2::before {
+  content: "";
+  width: 25%;
+  height: 2px;
+  position: absolute;
+  bottom: -15px;
+  background: #000;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: before-slide 3s ease-in-out infinite;
+}
+
+/* Scrollable slider */
+.course-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 1rem;
+  position: relative;
+}
+
+.course-slider::-webkit-scrollbar {
+  display: none; /* hide scrollbar */
+}
+
+.course-card {
+  flex: 0 0 320px;
+  height: 400px;
+  background: #fff;
+  box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.12);
+  scroll-snap-align: start;
+  padding: 1.25rem;
+  opacity: 0; /* 👈 initially hidden */
+  transform: translateY(100px);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d; /* 👈 3D ke liye */
+}
+
+.course-card:hover {
+  transform: translateZ(60px) rotateY(8deg) rotateX(4deg); /* 👈 3D depth */
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+
+.course-card:active {
+  cursor: grabbing;
+}
+
+
+.course-card img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  /* border-radius: 12px; */
+  margin-bottom: 1rem;
+}
+
+.course-card .title {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  font-size: 15px;
+  background: #b0d1fc;
+  color: #082c50;
+}
+.course-card p{
+  margin-top: 1rem;
+  color: black;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.course-card:nth-child(2) .title,
+.course-card:nth-child(5) .title {
+  background: #fdbcd7;
+  color: rgb(206, 25, 79);
+}
+.course-card:nth-child(3) .title,
+.course-card:nth-child(6) .title {
+  background: #ffd1ac;
+  color: rgb(235, 112, 40);
+}
+
+
+@media(max-width: 450px){
+
+  .courses {
+    padding: 3rem 5%;
+  }
+
+  .course-slider {
+    display: flex;
+    flex-direction: column; /* vertical stack */
+    gap: 20px;
+    overflow: visible; /* scroll hata diya */
+    scroll-snap-type: none;
+    padding: 0;
+  }
+
+  .course-card {
+    flex: 1 1 auto; /* responsive width */
+    width: 100%;    /* full width */
+    height: auto;   /* auto height */
+    transform: none; 
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.12);
+    opacity: 1;     /* 👈 initially hidden hata diya */
+    transition: none;
+    display: block; /* 👈 ensure card dikhe */
+  }
+
+  .course-card:hover {
+    transform: none;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.12);
+  }
+
+  .course-card img {
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 0.75rem;
+  }
+
+  .course-card .title {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+
+  .course-card p {
+    font-size: 16px;
+  }
+}
+

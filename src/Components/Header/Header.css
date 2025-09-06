@@ -1,0 +1,502 @@
+.header{
+    width: 100%;
+    height: 100vh;
+    /* background: 
+    linear-gradient(to bottom, rgba(160, 212, 255, 0.527), rgba(255, 201, 210, 0.705)), 
+    linear-gradient(to right, rgb(255, 234, 142), rgba(255, 255, 255, 0)),  
+    url(../../assets/hero-bg-2.jpg); */
+    background: linear-gradient(to bottom, rgba(107, 213, 255, 0.575), rgba(255, 230, 175, 0.459), rgba(255, 192, 203, 0.459));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    backdrop-filter: blur(100px);
+    overflow: hidden;
+}
+.navbar{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    width: 90px;
+    margin-right: 8%;
+}
+.nav-links li{
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #111;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+/* Underline effect */
+.nav-links li::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    background: rgb(3, 26, 41);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-in-out;
+}
+.nav-links li:hover{
+    color: rgb(3, 26, 41);
+    transform: translateY(-10px);
+}
+.nav-links li:hover::before {
+    width: 60%;
+    margin: 0 auto;
+    transform: translate(-50%);
+    left: 50%;
+}
+.nav-buttons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.nav-contact{
+    width: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid rgb(11, 50, 87);;
+    border-radius: 10px;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 500;
+    background: transparent;
+    color: #000;
+}
+.nav-contact svg{
+    fill: rgb(11, 50, 87);;
+    width: 30px;
+    height: 25px;
+    outline: 0;
+}
+.nav-contact:hover{
+    background: rgb(11, 50, 87);
+    color: white;
+}
+.nav-contact:hover svg{
+    fill: white;
+}
+.nav-btn{
+    width: auto;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgb(11, 50, 87);
+    color: white;
+    border-radius: 10px;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+}
+.nav-btn svg{
+    fill: white;
+}
+.nav-btn:hover{
+    background: rgb(7, 126, 173);
+}
+
+
+/* -----------------HERO SECTION---------------- */
+
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    padding: 0 8%;
+    gap: 20px;
+}
+.hero-left, .hero-right{
+    flex-basis: 47%;
+}
+.hero-left h3{
+    font-weight: 900;
+    font-size: 40px;
+    color: rgb(2, 10, 27);
+    line-height: 1.4;
+    margin-bottom: 2rem;
+    margin-top: 4rem;
+}
+.hero-left h3 span{
+    background: linear-gradient(90deg, #e70752, #a206e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero-left p{
+    margin: 1rem 0;
+}
+.hero-buttons{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.hero-video {
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.hero-video span {
+  position: relative; /* wave ke liye zaroori */
+  background: rgb(4, 116, 207);
+  box-shadow: 0 0 8px rgba(4, 116, 207, 0.377);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+}
+
+/* Ripple waves */
+.hero-video span::before,
+.hero-video span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(4, 116, 207, 0.4);
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 0;
+  animation: wave 2s infinite;
+}
+
+/* 2nd wave thoda delay me */
+.hero-video span::after {
+  animation-delay: 1s;
+}
+
+/* Wave keyframes */
+@keyframes wave {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.5);
+    opacity: 0;
+  }
+}
+
+.hero-video span svg {
+  width: 40px;
+  height: 30px;
+  fill: white;
+}
+
+.hero-stats{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    bottom: 20px;
+    left: 8%;
+    margin-top: 10%;
+}
+.box{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    border: 2px solid rgb(5, 20, 53);
+    min-width: 200px;
+    height: fit-content;
+    text-align: center;
+    /* height: 80px; */
+    border-radius: 3px;
+}
+
+.box img{
+    width: 40px;
+}
+.box-content h4{
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+}
+.box-content h3{
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.box-content h3 svg{
+    fill: rgb(255, 153, 0);
+}
+.box-default{
+    display: block;
+    min-width: 160px;
+}
+.box-default .box-content h3{
+    margin-top: 0;
+}
+
+                    /* hero right */
+
+.hero-right {
+  position: relative;
+  width: 100%;
+  height: 500px; /* thoda fixed height rakhna better hai */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.men {
+  position: absolute;
+  width: 330px;   /* thoda chhota taaki circle ke andar aaye */
+  /* scale: 1.6; */
+  bottom: -43px;      /* neeche set karne ke liye */
+  left: 55%;
+  transform: translateX(-50%);
+  z-index: 2;     /* circle ke upar */
+}
+.glow-circle {
+  position: absolute;   /* ya relative container ke andar use karna ho to */
+  width: 500px;         /* size control */
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(244, 0, 252, 0.6) 0%,
+    rgba(252, 0, 84, 0.342) 70%
+  );
+  z-index: 1;
+  filter: blur(30px);   /* blur control */
+  pointer-events: none; /* click block na ho */
+  bottom: -50px;
+  left: 40px;
+}
+.glass-card {
+  position: absolute;
+  padding: 15px 20px;
+  width: 300px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.671);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #111;
+  z-index: 3;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.377);
+
+  /* yeh line add karo */
+  animation: float 3s ease-in-out infinite;
+}
+
+.glass-card h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.glass-card p {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.glass-card button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.glass-card button:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+.glass-card.card1{
+    position: absolute;
+    bottom: -10px;
+    left: 10px;
+     animation-delay: 0.5s;
+}
+.glass-card.card2{
+    top: 40%;
+    transform: translateY(-50%);
+    right: -80px;
+}
+
+@media(max-width:450px){
+    .header{
+        height: 170vh;
+        overflow: hidden;
+    }
+    .navbar{
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo{
+    width: 80px;
+    }
+.nav-links {
+    display: none;
+}
+.nav-contact{
+    background: rgb(11, 50, 87);
+    color: white;
+}
+.nav-contact svg{
+    fill: rgb(255, 255, 255);;
+    width: 30px;
+    height: 25px;
+    outline: 0;
+}
+.nav-contact:hover{
+    background: rgb(7, 126, 173);
+    color: white;
+}
+.nav-contact:hover svg{
+    fill: white;
+}
+.nav-btn{
+    display: none;
+}
+
+
+/* ---------------HERO SECTION------------ */
+/* ---------------HERO SECTION------------ */
+/* ---------------HERO SECTION------------ */
+/* ---------------HERO SECTION------------ */
+/* ---------------HERO SECTION------------ */
+
+
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0 6%;
+    gap: 20px;
+}
+.hero-left, .hero-right{
+    flex-basis: 100%;
+}
+.hero-left h3{
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    margin-top: 2.5rem;
+}
+.hero-left p{
+    margin: 1rem 0;
+}
+.hero-buttons{
+    gap: 0px;
+    padding: 0;
+    margin-top: 1.25rem;
+}
+.hero-btn{
+    display: block;
+    padding: 15px 15px;
+    margin: 0;
+}
+.hero-video {
+    padding: 0;
+    margin-left: 20px;
+}
+
+.hero-stats{
+    flex-wrap: wrap;
+}
+ .hero-stats{
+        flex-wrap: wrap; /* boxes wrap ho jaye */
+        justify-content: center;
+        gap: 10px;
+        margin-top: 2rem;
+        bottom: auto; /* absolute positioning hata do */
+        left: auto;
+        display: none;
+    }
+
+    .box{
+        min-width: auto; /* 200px hata ke auto ya 45% rakh sakte ho */
+        flex-basis: 45%; /* do boxes side by side */
+        padding: 8px;
+        gap: 8px;
+        margin-bottom: 10px; /* thoda spacing */
+        text-align: center;
+    }
+    .box-content h3{
+        font-size: 16px;
+        margin: 0;
+    }
+
+                    /* hero right */
+
+.hero-right{
+    min-height: 100vh;
+    }
+.men {
+  position: absolute;
+  width: 350px;   /* thoda chhota taaki circle ke andar aaye */
+  /* scale: 1.6; */
+  top: 45%;      /* neeche set karne ke liye */
+  left: 55%;
+  transform: translate(-50%, -50%);
+  z-index: 2;     /* circle ke upar */
+}
+.glow-circle {
+    width: 400px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.glass-card {
+  padding: 10px 15px;
+  width: 250px;
+}
+.glass-card.card1{
+    position: absolute;
+    bottom: 100px;
+    left: 0px;
+    animation-delay: 0.5s;
+}
+.glass-card.card2{
+    top: 35%;
+    transform: translateY(-50%);
+    right: -70px;
+}
+
+
+
+
+}
+

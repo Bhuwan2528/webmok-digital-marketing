@@ -1,0 +1,127 @@
+.placement-partners {
+  width: 100%;
+  background: transparent; /* parent transparent */
+  overflow: hidden;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.placement-partners h2{
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+    color: #111;
+    margin: 2rem auto;
+    margin-bottom: 4rem;
+    position: relative;
+}
+.placement-partners h2::before{
+    content: '';
+    width: 25%;
+    height: 2px;
+    position: absolute;
+    bottom: -20px;
+    background: #000; 
+    left: 50%; /* start at 50% of parent */
+    transform: translateX(-50%); /* shift half of its own width to center */
+    animation: before-slide1 3s ease-in-out infinite;    
+}
+@keyframes before-slide1 {
+  0% {
+    width: 0px;
+  }
+  50% {
+    width: 125%;
+  }
+  100% {
+    width: 0px;
+  }
+}
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll 30s linear infinite;
+}
+
+.slider-right-to-left .slide-track {
+  animation: scroll-reverse 30s linear infinite;
+}
+
+.slide {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/* FIXED SIZE BOX */
+.img-box {
+  width: 200px;          /* fixed width */
+  height: 150px;         /* fixed height */
+  background: white;     /* white background for PNGs */
+  padding: 10px;
+  /* border-radius: 10px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.116);
+}
+
+.img-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* keeps aspect ratio */
+  display: block;
+}
+
+/* Animations */
+@keyframes scroll {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes scroll-reverse {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .img-box {
+    width: 120px;
+    height: 80px;
+  }
+}
+
+@media(max-width: 480px) {
+  .img-box {
+    width: 100px;
+    height: 70px;
+  }
+  .placement-partners {
+  margin: 2rem 0;
+}
+.placement-partners h2{
+    width: 85%;
+    margin: 0 auto;
+    margin: 2rem auto;
+    margin-bottom: 4rem;
+    position: relative;  
+    
+    
+}
+.placement-partners h2::before{
+  animation: before-slide1 3s ease-in-out infinite; 
+}
+}

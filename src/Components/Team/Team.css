@@ -1,0 +1,187 @@
+.team{
+    width: 100%;
+    /* background: linear-gradient(to bottom, #fdc5e1b0, #daaffd); */
+    padding: 2rem 4rem;
+}
+.team h3{
+    font-weight: 700;
+    font-size: 45px;
+    text-align: center;
+    color: #111;
+    margin: 2rem auto;
+    margin-bottom: 4rem;
+    position: relative;
+}
+.team h3::before{
+    content: '';
+    width: 25%;
+    height: 2px;
+    position: absolute;
+    bottom: -20px;
+    background: #000; 
+    left: 50%; /* start at 50% of parent */
+    transform: translateX(-50%); /* shift half of its own width to center */
+    animation: before-slide 3s ease-in-out infinite;
+    
+}
+.team p{
+    text-align: center;
+    font-size: 18px;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+.team-slider{
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.team-card {
+  width: 260px;
+  min-height: 280px;
+  background: #fff;
+  padding: 1rem;
+  /* border-radius: 12px; */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+
+.team-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.team-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  transition: transform 0.3s ease;
+}
+
+.team-card img:hover {
+  transform: scale(1.05);
+}
+
+.team-card h2{
+    font-size: 20px;
+    font-weight: 800;
+    color: #021a27;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+.team-card h4{
+    font-size: 16px;
+    font-weight: 500;
+    color: #111;
+    margin-bottom: 2rem;
+}
+.social-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: fit-content;
+    margin: 0.5rem auto;
+}
+.social-icons span {
+  width: 40px;
+  height: 40px;
+  /* border-radius: 50%; */
+  border: none;
+  background: #ebe9e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-icons span:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.team-card:hover .social-icons span{
+        background: #073147e8;
+}
+
+.team-card:hover .social-icons span svg{
+        fill: #eee;
+}
+.social-icons span:nth-child(1):hover { background: linear-gradient(45deg,#feda75,#d62976,#962fbf,#4f5bd5); color: #fff; }
+.social-icons span:nth-child(2):hover { background: #1877f2; color: #fff; }
+.social-icons span:nth-child(3):hover { background: #1da1f2; color: #fff; }
+
+.social-icons span svg{
+    width: 20px;
+    height: 20px;
+    fill: #073147e8;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .team {
+    padding: 2rem 2rem;
+  }
+
+  .team h3 {
+    font-size: 40px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    width: 65%;
+  }
+
+  .team h3::before{
+    animation: before-slide1 3s ease-in-out infinite;
+    
+}
+
+  .team p {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 3rem;
+  }
+
+  .team-slider {
+    flex-direction: column; /* vertical stack */
+    gap: 20px;
+    width: 100%;
+  }
+
+  .team-card {
+    width: 100%; /* full width */
+    min-height: auto; /* height auto */
+    padding: 1rem;
+  }
+
+  .team-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+
+  .team-card h2 {
+    font-size: 18px;
+  }
+
+  .team-card h4 {
+    font-size: 14px;
+  }
+
+  .social-icons span {
+    width: 35px;
+    height: 35px;
+  }
+
+  .social-icons span svg {
+    width: 16px;
+    height: 16px;
+  }
+}

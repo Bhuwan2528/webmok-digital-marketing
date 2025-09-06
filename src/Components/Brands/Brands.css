@@ -1,0 +1,108 @@
+.brands-strip {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(180deg, #1c0730 0%, #1a0630 45%, #17052c 100%);
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+/* 🔵 left glowing dot */
+.brands-strip::before {
+  content: "";
+  position: absolute;
+  left: 22px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid rgba(120, 97, 255, 0.7);
+  box-shadow:
+    0 0 0 6px rgba(120, 97, 255, 0.15),
+    0 0 12px rgba(120, 97, 255, 0.6) inset;
+}
+
+/* 🟣 bottom-center purple glow */
+.brands-strip::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;   /* thoda bahar tak */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 120px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(120, 97, 255, 0.35) 0%,
+    rgba(120, 97, 255, 0.05) 60%,
+    transparent 100%
+  );
+  filter: blur(30px);
+  z-index: 0;
+}
+
+/* container */
+.brands-track {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px 0 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 48px;
+  position: relative;
+  z-index: 1; /* glow ke upar dikhana */
+}
+
+/* brands same */
+.brand-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  opacity: 0.9;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.brand-item:hover {
+  transform: translateY(-4px);
+  opacity: 1;
+}
+
+.brand-svg {
+  display: block;
+  height: 60px;
+  width: auto;
+  filter: brightness(0) invert(1) opacity(0.9);
+}
+
+
+/* If you want original brand colors, REMOVE the filter above. */
+
+/* responsiveness */
+@media (max-width: 1024px) {
+  .brands-track {
+    gap: 36px;
+    padding: 0 24px 0 56px;
+  }
+  .brand-svg { height: 32px; }
+}
+
+@media (max-width: 768px) {
+  .brands-strip { padding: 24px 0; }
+  .brands-track {
+    gap: 28px;
+    flex-wrap: wrap;                /* chhoti screens par wrap kare */
+    justify-content: center;
+    padding-left: 56px;
+  }
+  .brand-item { min-width: 120px; }
+  .brand-svg { height: 28px; }
+}
+
+@media (max-width: 480px) {
+  .brands-strip::before { left: 16px; }
+  .brands-track { padding-left: 48px; gap: 22px; }
+  .brand-item { min-width: 100px; }
+  .brand-svg { height: 24px; }
+}

@@ -1,0 +1,161 @@
+.container {
+  text-align: center;
+  min-width: 99vw;
+  background: #fcfcfc;
+  padding: 7% 5%;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.164);
+  box-sizing: border-box;
+  position: relative;
+}
+.headings h3{
+    margin-top: 2rem;
+    font-size: 25px;
+    font-weight: 500;
+}
+.icon-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  gap: 80px; /* dono side wali ke beech space */
+}
+.about-logo {
+  width: 90px;
+  height: 90px;
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(5, 43, 78, 0.623);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  z-index: 1;
+}
+
+.about-logo.main img {
+  width: 70px;
+  border-radius: 0%;
+  object-fit: contain;
+}
+.about-logo img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Beech wali image overlap kare dono ke upar */
+.about-logo.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%) scale(1.2); /* thoda bada aur overlap */
+  z-index: 2; /* dono ke upar rahe */
+}
+
+.star{
+    width: 150px;
+    display: block;
+    text-align: left;
+    position: absolute;
+    top: 20%;
+    left: 0;
+    animation: float 3s ease-in-out infinite;
+}
+.star1{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.scroll-highlight {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.4;
+  display: inline-block;
+  background: linear-gradient(
+    to right,
+    #2987d4 50%,
+    #d3d3d3 50% /* faded color */
+  );
+  background-size: 200% 100%;
+  background-position-x: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.scroll-text{
+    margin-top: 4rem;
+}
+
+
+@media(max-width: 450px){
+  .container {
+  padding: 7% 5%;
+}
+.headings h3{
+    margin-top: 2rem;
+    font-size: 25px;
+    font-weight: 500;
+}
+.icon-img {
+  gap: 60px; /* dono side wali ke beech space */
+  margin-top: 2rem;
+}
+.about-logo {
+  width: 80px;
+  height: 80px;
+  padding: 5px;
+}
+
+.about-logo.main img {
+  width: 60px;
+}
+.about-logo img {
+  width: 70px;
+  height: 70px;
+}
+
+/* Beech wali image overlap kare dono ke upar */
+.about-logo.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%) scale(1.2); /* thoda bada aur overlap */
+  z-index: 2; /* dono ke upar rahe */
+}
+
+.star{
+    width: 100px;
+    top: 22%;
+    left: 0;
+}
+.star1{
+    bottom: 0;
+    right: 0;
+    width: 100px;
+}
+
+.scroll-text {
+    font-size: 1rem; /* smaller base for mobile */
+    margin-top: 2rem;
+    line-height: 1.4;
+    margin-bottom: 5rem;
+  }
+
+  .scroll-highlight {
+    font-size: 1.3rem; /* smaller than desktop */
+    line-height: 1.4;
+    display: block;     /* block to stack lines nicely */
+    background-size: 200% 100%;
+    background-position-x: 100%;
+  }
+
+  /* Optional: spacing between lines */
+  /* .scroll-highlight + .scroll-highlight {
+    margin-top: 0.8rem;
+  } */
+
+}
