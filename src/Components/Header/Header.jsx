@@ -35,7 +35,7 @@ const Header = ({ openPopup }) => {
         </div>
 
         <div className="hero">
-            <div className="hero-left">
+            {/* <div className="hero-left">
                 <h3>4 Months Online & Offline <br /><span>Digital Marketing Course</span></h3>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe consequatur, praesentium quae veritatis vero facilis minima placeat eum natus cumque magni error nisi quo tempore molestiae corporis. Nisi, quibusdam adipisci!</p>
 
@@ -68,7 +68,7 @@ const Header = ({ openPopup }) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
             <div className="hero-right">
                 <div className="glow-circle"></div>
