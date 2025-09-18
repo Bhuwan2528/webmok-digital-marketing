@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'Helvetica';
-  src: url('./assets/Helvetica.woff') format('woff');
+  src: url('/Helvetica.woff') format('woff');
 } 
 
 *{
