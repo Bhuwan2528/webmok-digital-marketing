@@ -139,6 +139,7 @@
 }
 .hero-left p{
     margin: 1rem 0;
+    margin-bottom: 2rem;
 }
 .hero-buttons{
     display: flex;
@@ -465,10 +466,10 @@
     }
 .men {
   position: absolute;
-  width: 350px;   /* thoda chhota taaki circle ke andar aaye */
+  width: 360px;   /* thoda chhota taaki circle ke andar aaye */
   /* scale: 1.6; */
   top: 45%;      /* neeche set karne ke liye */
-  left: 55%;
+  left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;     /* circle ke upar */
 }
@@ -486,17 +487,16 @@
 .glass-card.card1{
     position: absolute;
     bottom: 100px;
-    left: 0px;
+    left: -20px;
     animation-delay: 0.5s;
+    padding: 15px;
 }
 .glass-card.card2{
-    top: 35%;
+    width: 230px;
+    top: 30%;
     transform: translateY(-50%);
-    right: -70px;
+    right: -20px;
+    padding: 15px;
 }
-
-
-
-
 }
 

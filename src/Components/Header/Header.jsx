@@ -27,7 +27,9 @@ const Header = ({ openPopup }) => {
                 <li><ScrollLink to="form-section" smooth={true} offset={0} duration={800}>Contact Us</ScrollLink></li>
             </ul>
             <div className="nav-buttons">
-                <button className='nav-contact'><span><IoMdCall /></span>Let's Talk</button>
+                <button className='nav-contact'  onClick={() => {
+                window.location.href = "tel:+918684031003"; // yahan apna number daalo
+                }}><span><IoMdCall /></span>Let's Talk</button>
                 <button onClick={openPopup} className="nav-btn">Enroll Now <span><FaArrowRightLong /></span></button>
             </div>
         </div>
